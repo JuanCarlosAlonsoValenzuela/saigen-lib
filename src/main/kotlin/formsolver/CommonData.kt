@@ -8,7 +8,7 @@ object CommonData {
     @JvmStatic
     val logger: Logger by lazy { LoggerFactory.getLogger(this::class.java) }
 
-    var namespacesXModel = arrayOf("dbpedia-owl:")
+    var namespacesXModel = arrayOf("dbpedia-owl:", "dbpprop:")
     var namespacesXCuts = arrayOf("dbpedia-owl:", "rdfs:", "foaf:", "yago:", "skos:", "bibo:", "fb:")
     var prefix =
         "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX dbpedia-owl: <http://dbpedia.org/ontology/>\nPREFIX foaf: <http://xmlns.com/foaf/0.1/>\nPREFIX yago: <http://dbpedia.org/class/yago/>\nPREFIX dbpprop: <http://dbpedia.org/property/>\nPREFIX dc: <http://purl.org/dc/elements/1.1/>\nPREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>\nPREFIX geonames: <http://www.geonames.org/ontology#>\nPREFIX skos: <http://www.w3.org/2004/02/skos/core#>\nPREFIX bibo: <http://purl.org/ontology/bibo/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX fb: <http://rdf.freebase.com/ns/>\nPREFIX dcterm: <http://purl.org/dc/terms>\nPREFIX dcmitype: <http://purl.org/dc/dcmitype/>\nPREFIX mmd: <http://musicbrainz.org/ns/mmd-1.0#>\nPREFIX aws: <http://soap.amazon.com/>"

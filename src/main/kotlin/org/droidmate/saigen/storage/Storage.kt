@@ -86,7 +86,8 @@ class Storage constructor(private val storageProviders: SortedSet<StorageProvide
      */
     fun query(labels: List<String>): List<QueryResult> {
         // Remove blacklisted terms
-        var labelsToProcess = labels.nonBlacklisted()
+//        var labelsToProcess = labels.nonBlacklisted()
+        var labelsToProcess = labels
 
         if (labelsToProcess.isEmpty()) {
             log.warn("No valid inputs found for labels $labels")

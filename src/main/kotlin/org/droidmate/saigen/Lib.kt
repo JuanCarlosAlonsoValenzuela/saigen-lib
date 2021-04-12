@@ -29,14 +29,15 @@ class Lib {
         // TODO: maybe pass this as parameter to getInputsForLabels?
         private val storage = Storage(
             sortedSetOf(
-                LinkProvider(),
-                DictionaryProvider(
-                    mapOf(
-                        "user" to listOf("Johnny1999", "Emmmma95"),
-                        "password" to listOf("sec", "rets"),
-                        "url" to listOf("http://google.com")
-                    )
-                )
+                LinkProvider()
+//                ,
+//                DictionaryProvider(
+//                    mapOf(
+//                        "user" to listOf("Johnny1999", "Emmmma95"),
+//                        "password" to listOf("sec", "rets"),
+//                        "url" to listOf("http://google.com")
+//                    )
+//                )
             )
         )
 

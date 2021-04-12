@@ -17,7 +17,7 @@ object Main {
 		//val dataCrowBestOrder = arrayOf("Isbn", "Series", "Title", "Year", "Volume", "Pages", "Description", "Comment", "Webpage")
 		//val aMetro = arrayOf("Station", "Station")
 		var i = 0
-		val prova = listOf("CITY")
+		val prova = listOf("address")
 
 
 		val result = getInputsForLabels(prova)
