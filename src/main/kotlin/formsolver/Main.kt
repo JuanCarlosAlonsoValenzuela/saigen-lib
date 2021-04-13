@@ -21,7 +21,7 @@ object Main {
 		//val dataCrowBestOrder = arrayOf("Isbn", "Series", "Title", "Year", "Volume", "Pages", "Description", "Comment", "Webpage")
 		//val aMetro = arrayOf("Station", "Station")
 //		val prova = listOf("author", "publisher", "serial")
-		val prova = listOf("title", "author", "isbn")
+		val prova = listOf("author", "isbn", "title")
 
 //		println(testGetSynonyms("countryCode"))
 
