@@ -29,7 +29,7 @@ object PredicateRedundancy {
     @JvmStatic
     val logger: Logger by lazy { LoggerFactory.getLogger(this::class.java) }
 
-    private var endpoint = "http://dbpedia-live.openlinksw.com/sparql" // "http://ra.lta.disco.unimib.it:8890/sparql" //
+    private var endpoint = "http://localhost:8890/sparql" // "http://ra.lta.disco.unimib.it:8890/sparql" //
     private var candidates: MutableMap<String, Double> = mutableMapOf()
     private var orderedCandidates: MutableMap<String, Double> = mutableMapOf()
     lateinit var namespaces: Array<String>

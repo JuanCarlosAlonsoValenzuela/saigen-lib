@@ -16,14 +16,11 @@ object Main {
 
 	@JvmStatic
 	fun main(args: Array<String>) {
-		var internalArgs = args
-		var kek = args
-		//val dataCrowBestOrder = arrayOf("Isbn", "Series", "Title", "Year", "Volume", "Pages", "Description", "Comment", "Webpage")
-		//val aMetro = arrayOf("Station", "Station")
-//		val prova = listOf("author", "publisher", "serial")
-		val prova = listOf("author", "isbn", "title")
 
-//		println(testGetSynonyms("countryCode"))
+		var prova = listOf("countryCode")
+
+
+
 
 		val saigenResults = getInputsForLabels(prova)
 
@@ -61,17 +58,9 @@ object Main {
 
 		}
 
-//		data class QueryResult(
-//			val label: String,
-//			val values: List<String>,
-//			val queryId: UUID
-//		)
-
-		// Write csv file with name = result.label
-		// One value per line
 
 
-		val delete = "delete"
+
 	}
 
 	private val cache = mutableMapOf<String, List<String>>()

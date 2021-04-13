@@ -62,7 +62,7 @@ class Storage constructor(private val storageProviders: SortedSet<StorageProvide
             // If provider could answer the result
             if (result.hasValue()) {
                 val pendingLabels = labels
-                    .filterNot { l -> result.first.any { it == l } }
+                    .filterNot { l -> result.first.any { it == l.toLowerCase() } }      // TODO: Modification 2
 
                 val recursiveResult = queryProvidersRecursively(pendingLabels)
                 aggregateResult.add(recursiveResult)
@@ -72,7 +72,7 @@ class Storage constructor(private val storageProviders: SortedSet<StorageProvide
 
         // If the label is pending here, it cannot be found in any storage
         val pendingLabels = labels
-            .filterNot { l -> aggregateResult.first.any { it == l } }
+            .filterNot { l -> aggregateResult.first.any { it == l.toLowerCase() } }     // TODO: Modification 3
 
         blacklistedWords.addAll(pendingLabels.flatMap { it.getSynonyms() })
 
@@ -113,6 +113,7 @@ class Storage constructor(private val storageProviders: SortedSet<StorageProvide
         // Filter cache for result
         // Internally this performs an expansion to all synonyms and thus the label matching should work
         // Need to get new blacklist as it could have been updated
-        return queryCache.search(labels.nonBlacklisted())
+        val delete = "delete"
+        return queryCache.search(labels.nonBlacklisted().map { l -> l.toLowerCase() })      // TODO: Modification 4
     }
 }

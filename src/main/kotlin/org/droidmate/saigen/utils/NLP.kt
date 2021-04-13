@@ -39,16 +39,16 @@ object NLP {
         if (!cache.containsKey(word)) {
             try {
                 val words = WordNet.getSynonyms(word)
-                    .map { it.replace("_", " ") }
-                    .map {
-                        it.map { c ->
-                            if (c in 'A'..'Z')
-                                " $c"
-                            else
-                                "$c"
-                        }.joinToString("")
-                    }
-                    .filterNot { it.contains(" ") }
+//                    .map { it.replace("_", " ") }     TODO: Modification 1
+//                    .map {
+//                        it.map { c ->
+//                            if (c in 'A'..'Z')
+//                                " $c"
+//                            else
+//                                "$c"
+//                        }.joinToString("")
+//                    }
+//                    .filterNot { it.contains(" ") }
                     .distinct()
                 words.forEach { cache[it] = words }
             } catch (e: Exception) {
