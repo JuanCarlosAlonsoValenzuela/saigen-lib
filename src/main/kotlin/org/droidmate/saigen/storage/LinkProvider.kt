@@ -8,7 +8,7 @@ class LinkProvider @JvmOverloads constructor(
     /**
      * Maximum number of entries which should be queried by link
      */
-    private val maxEntries: Int = 100,
+    private val maxEntries: Int = 1000,
     /**
      * Threshold for a predicate association (Link)
      */

@@ -17,7 +17,7 @@ object Main {
 	@JvmStatic
 	fun main(args: Array<String>) {
 
-		var prova = listOf("countryCode")
+		var prova = listOf("author", "isbn", "title")
 
 
 
